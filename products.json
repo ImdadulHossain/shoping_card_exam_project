@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1",
+        "description": "Description for Product 1",
+        "price": 150,
+        "image": "https://static.vecteezy.com/system/resources/previews/012/794/340/original/blank-white-bottles-cosmetic-skincare-makeup-for-product-mockup-3d-render-illustration-png.png"
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "description": "Description for Product 2",
+        "price": 200,
+        "image": "https://cdnmedia.endeavorsuite.com/images/catalogs/23219/products/detail/4a4981bb-4bfc-49dc-bb68-ad8b601f1b3d.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "description": "Description for Product 3",
+        "price": 180,
+        "image": "https://th.bing.com/th/id/OIP.lTmSRLPfVUJxz76w1rT8eQHaEX?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": 4,
+        "name": "Product 4",
+        "description": "Description for Product 4",
+        "price": 220,
+        "image": "https://img.freepik.com/free-vector/white-product-podium-with-green-tropical-palm-leaves-golden-round-arch-green-wall_87521-3023.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Product 4",
+        "description": "Description for Product 4",
+        "price": 220,
+        "image": "https://img.freepik.com/free-vector/white-product-podium-with-green-tropical-palm-leaves-golden-round-arch-green-wall_87521-3023.jpg"
+    }
+]
