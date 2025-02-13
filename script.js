@@ -13,7 +13,7 @@ function displayProducts(products) {
         productDiv.classList.add('col-md-4', 'product-card');
         productDiv.innerHTML = `
             <div class="card">
-                <img src="${product.image}" class="card-img-top fixed-img align-center" alt="${product.name}">
+                <img src="${product.image}" class="card-img-top fixed-img aligh" alt="${product.name}">
                 <div class="card-body">
                     <h5 class="card-title">${product.name}</h5>
                     <p class="card-text">${product.description}</p>
