@@ -112,10 +112,6 @@ document.getElementById('clear-cart').addEventListener('click', () => {
     hideCheckout();
 });
 
-document.getElementById('checkout-button').addEventListener('click', () => {
-    alert('Proceeding to checkout...');
-});
-
 document.getElementById('apply-promo-code').addEventListener('click', () => {
     const promoCode = document.getElementById('promo-code').value;
     const promoMessage = document.getElementById('promo-message');
