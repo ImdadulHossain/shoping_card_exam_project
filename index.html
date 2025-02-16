@@ -31,6 +31,13 @@
         <div class="product-list row justify-content-center" id="product-list"></div>
         <div class="checkout card position-fixed h-100 p-3">
             <div class="card-body">
+                <h3>Subtotal: <span id="subtotal-price">TK 0</span></h3>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="promo-code" placeholder="Enter promo code">
+                    <button class="btn btn-primary mt-2" id="apply-promo-code">Apply Promo Code</button>
+                    <div id="promo-message" class="mt-2"></div>
+                </div>
+                <h3>Discount: <span id="discount-amount">TK 0</span></h3>
                 <h3>Total: <span id="total-price">Tk 0</span></h3>
                 <button class="btn btn-danger w-100" id="clear-cart">Clear Cart</button>
                 <div class="cart-options" id="cart-options"></div>

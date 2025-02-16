@@ -5,6 +5,7 @@ fetch('products.json')
     });
 
 const cart = [];
+let discount = 0;
 
 function displayProducts(products) {
     const productList = document.getElementById('product-list');
@@ -96,14 +97,46 @@ function decreaseQuantity(id) {
 }
 
 function calculateTotal() {
-    const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-    document.getElementById('total-price').innerText = `Tk ${totalPrice}`;
+    const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const discountAmount = subtotal * (discount / 100);
+    const totalPrice = subtotal - discountAmount;
+
+    document.getElementById('subtotal-price').innerText = `Tk ${subtotal.toFixed(2)}`;
+    document.getElementById('discount-amount').innerText = `-TK ${discountAmount.toFixed(2)}`;
+    document.getElementById('total-price').innerText = `TK ${totalPrice.toFixed(2)}`;
 }
 
 document.getElementById('clear-cart').addEventListener('click', () => {
     cart.length = 0;
     updateCart();
     hideCheckout();
+});
+
+document.getElementById('checkout-button').addEventListener('click', () => {
+    alert('Proceeding to checkout...');
+});
+
+document.getElementById('apply-promo-code').addEventListener('click', () => {
+    const promoCode = document.getElementById('promo-code').value;
+    const promoMessage = document.getElementById('promo-message');
+
+    if (promoCode === 'ostad10') {
+        discount = 10;
+        promoMessage.textContent = 'Promo code applied: 10% discount';
+        promoMessage.classList.add('text-success');
+        promoMessage.classList.remove('text-danger');
+    } else if (promoCode === 'ostad5') {
+        discount = 5;
+        promoMessage.textContent = 'Promo code applied: 5% discount';
+        promoMessage.classList.add('text-success');
+        promoMessage.classList.remove('text-danger');
+    } else {
+        discount = 0;
+        promoMessage.textContent = 'Invalid promo code';
+        promoMessage.classList.add('text-danger');
+        promoMessage.classList.remove('text-success');
+    }
+    calculateTotal();
 });
 
 function showCheckout() {
